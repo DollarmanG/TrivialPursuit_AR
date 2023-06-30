@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "com.aukilabs.unity.conjurekit": "0.6.14",
+    "com.aukilabs.unity.grund": "0.6.6",
+    "com.aukilabs.unity.manna": "0.6.25",
     "com.unity.ar-companion-core": "3.0.0-exp.3",
     "com.unity.collab-proxy": "2.0.5",
     "com.unity.content-manager": "0.1.6-preview",
@@ -46,5 +49,14 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0"
-  }
+  },
+  "scopedRegistries": [
+    {
+      "name": "Auki Labs",
+      "url": "https://npm.aukiverse.com",
+      "scopes": [
+        "com.aukilabs"
+      ]
+    }
+  ]
 }
