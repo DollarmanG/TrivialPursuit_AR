@@ -7,11 +7,7 @@ public class Dice : MonoBehaviour
 {
     public List<Sprite> diceImages;
 
-    public RawImage diceRawImage;
-    void Start()
-    {
-        diceRawImage.GetComponent<Button>().onClick.AddListener(RollDice);
-    }
+    [SerializeField] RawImage diceRawImage;
 
     public void OnMouseDown()
     {
@@ -28,6 +24,8 @@ public class Dice : MonoBehaviour
             Sprite diceSprite = diceImages[imageIndex];
 
             diceRawImage.texture = diceSprite.texture;
+
+            Debug.Log(randomNumber);
         }
     }
 }
