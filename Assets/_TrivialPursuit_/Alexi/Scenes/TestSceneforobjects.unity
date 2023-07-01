@@ -561,6 +561,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6992153940915505887, guid: 2e7dfcad7270b334792eed9f983d5e32, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b30c438ecd7a6048a39f3eeed0d156c, type: 2}
     - target: {fileID: 8172961553367293889, guid: 2e7dfcad7270b334792eed9f983d5e32, type: 3}
       propertyPath: m_Name
       value: Gameboard
