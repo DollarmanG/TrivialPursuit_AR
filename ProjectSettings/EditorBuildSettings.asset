@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_TrivialPursuit_/_Original Content/Scenes/Main Scene - Trivial Pursuit.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Plugins/CW/LeanTouch+/Examples/Selection/09 Pickable.unity
     guid: 0c6a22b7452bfdb46b56c0fe58070a72
+  - enabled: 1
+    path: Assets/_TrivialPursuit_/Alexi/Scenes/TestSceneforobjects.unity
+    guid: 841b8313c1815bb41a47b8523068c091
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 60f7571e1a04d8f4e9cf11e67ac9f06b, type: 2}
     com.unity.mars-ar-foundation-providers.xr_subsystem_settings: {fileID: 11400000, guid: 1b69c69296dbd4e74b55b1c3a2190c7c, type: 2}
