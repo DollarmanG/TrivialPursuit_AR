@@ -9,7 +9,6 @@ public class CardStackHandler : MonoBehaviour
     [SerializeField] private List<RawImage> cardList = new List<RawImage>();
 
     [SerializeField] private GameObject cardDeck;
-
     public void ShowFirstCard()
     {
         cardList[0].gameObject.SetActive(true);
