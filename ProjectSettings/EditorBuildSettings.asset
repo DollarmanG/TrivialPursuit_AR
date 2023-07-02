@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_TrivialPursuit_/Henry/Scenes/ConjureKitTest.unity
+    path: Assets/_TrivialPursuit_/Henry/Scenes/Main - Trivial Pursuit AR.unity
     guid: 6ce475d1ee01b204abe0bd260131cb62
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 60f7571e1a04d8f4e9cf11e67ac9f06b, type: 2}
