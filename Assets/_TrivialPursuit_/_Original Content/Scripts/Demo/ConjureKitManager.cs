@@ -14,6 +14,7 @@ public class ConjureKitManager : MonoBehaviour
     [SerializeField] private Text sessionID;
 
     [SerializeField] private GameObject cube;
+    [SerializeField] private GameObject sphere;
     [SerializeField] private Button spawnButton;
 
     [SerializeField] bool qrCodeBool;
@@ -52,7 +53,8 @@ public class ConjureKitManager : MonoBehaviour
             sessionID.text = "";
         };
 
-        _conjureKit.OnEntityAdded += CreateCube;
+        //_conjureKit.OnEntityAdded += CreateCube;
+        _conjureKit.OnEntityAdded += CreateSphere;
 
         _conjureKit.Init(ConjureKitConfiguration.Get());
 
@@ -105,27 +107,51 @@ public class ConjureKitManager : MonoBehaviour
         _manna.SetLighthouseVisible(qrCodeBool);
     }
 
-    public void CreateCubeEntity()
+    //public void CreateCubeEntity()
+    //{
+    //    if (_conjureKit.GetState() != State.Calibrated)
+    //        return;
+
+    //    Vector3 position = arCamera.transform.position + arCamera.transform.forward * 0.5f;
+    //    Quaternion rotation = Quaternion.Euler(0, arCamera.transform.eulerAngles.y, 0);
+
+    //    Pose entityPos = new Pose(position, rotation);
+
+    //    _conjureKit.GetSession().AddEntity(
+    //        entityPos,
+    //        onComplete: entity => CreateCube(entity),
+    //        onError: error => Debug.Log(error));
+    //}
+
+    //private void CreateCube(Entity entity)
+    //{
+    //    if (entity.Flag == EntityFlag.EntityFlagParticipantEntity) return;
+
+    //    var pose = _conjureKit.GetSession().GetEntityPose(entity);
+    //    Instantiate(cube, pose.position, pose.rotation);
+    //}
+
+    public void CreateSphereEntity(GameObject spawnedSphere)
     {
         if (_conjureKit.GetState() != State.Calibrated)
             return;
 
-        Vector3 position = arCamera.transform.position + arCamera.transform.forward * 0.5f;
-        Quaternion rotation = Quaternion.Euler(0, arCamera.transform.eulerAngles.y, 0);
+        Vector3 position = spawnedSphere.transform.position;
+        Quaternion rotation = spawnedSphere.transform.rotation;
 
         Pose entityPos = new Pose(position, rotation);
 
         _conjureKit.GetSession().AddEntity(
             entityPos,
-            onComplete: entity => CreateCube(entity),
+            onComplete: entity => CreateSphere(entity),
             onError: error => Debug.Log(error));
     }
 
-    private void CreateCube(Entity entity)
+    public void CreateSphere(Entity entity)
     {
         if (entity.Flag == EntityFlag.EntityFlagParticipantEntity) return;
 
         var pose = _conjureKit.GetSession().GetEntityPose(entity);
-        Instantiate(cube, pose.position, pose.rotation);
+        Instantiate(sphere, pose.position, pose.rotation);
     }
 }
